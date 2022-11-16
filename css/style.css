@@ -14,7 +14,7 @@
 }
 
 html{
-    background-image: url('/assets/scenery.jpg');
+    background-image: url('./assets/scenery.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -22,7 +22,7 @@ html{
 body{
     font-family: var(--font-family);
     font-size: 62.5%;
-    width: 100%;
+    max-width: 100%;
     /* filter: brightness(1.4); */
     overflow-y: hidden;
 }
@@ -31,7 +31,7 @@ body{
     font-family: 'GOD OF WAR';
     src:
         local('GODOFWAR'),
-        url('/GODOFWAR.TTF') format("truetype-variations");
+        url('../GODOFWAR.TTF') format("truetype-variations");
 }
 
 .container{
