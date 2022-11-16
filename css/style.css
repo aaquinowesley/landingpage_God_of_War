@@ -14,7 +14,7 @@
 }
 
 html{
-    background-image: url('./assets/scenery.jpg');
+    background-image: url('../assets/scenery.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
