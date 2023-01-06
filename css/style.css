@@ -7,22 +7,25 @@
     text-decoration: none;
 }
 
+html{
+    background: url('../assets/scenery.jpg') no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+
+}
 
 :root{
     --text-color-: #ffffff;
     --font-family: 'GOD OF WAR', sans-serif;
 }
 
-html{
-    background-image: url('../assets/scenery.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 body{
     font-family: var(--font-family);
     font-size: 62.5%;
-    max-width: 100%;
     /* filter: brightness(1.4); */
     overflow-y: hidden;
 }
@@ -34,40 +37,41 @@ body{
         url('../GODOFWAR.TTF') format("truetype-variations");
 }
 
+:mark{
+    color: red;
+}
+
 .container{
-    max-width: 100%;
     background-color: black;
+    width: 100vw;
+    height: 100vh;
     opacity: 0.9;
-    /* backdrop-filter: blur(9px); */
 }
 
 .header{
     display: flex;
-    justify-content: start;
 }
 
-.header img{
-    width: 35%;
-    padding: 1rem;
+.logo img{
+    margin: 0.8rem;
+    width: 30%;
 }
 
 .nav{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    align-content: space-between;
-    
 }
 
 .nav ul{
     display: flex;
     gap: 2rem;
-
 }
 
-/* .nav ul li{
-    display: flex;
-} */
+.nav ul li{
+    display: block;
+}
 
 .nav ul li a{
     color: #ffffff;
@@ -82,68 +86,44 @@ body{
     border-bottom: 1px solid red;
 }
 
-/* ########## MAIN ########## */
+/* Main */
 
-#main{
-    margin-top: 15rem;
+/* #main{
     width: 100%;
+} */
+
+.main-textos{
+    padding: 1rem;
+    flex-direction: column;
+    font-size: 1.2rem;
 }
+
+::selection {
+    color: rgb(0, 0, 0);
+    background-color: red;
+  }
 
 #main .tilte{
-    text-align: start;
-    margin-left: 5rem;
-    font-size: 2rem;
+    margin-left: 4vw;
+    color: #ffffff;
 }
 
-#main .tilte h1{
-    color: rgb(255, 255, 255);
-}
-
-#main .tilte h1::selection{
-    background-color: rgb(255, 0, 0);
-}
-
-#main .text-center{
-    text-align: start;
-    word-break: break-word;
-    width: 50%;
-    margin-left: 5rem;
-    /* border: 1px solid red; */
-}
-
-#main p{
-    font-size: 1.3rem;
-    font-family: 'GOD OF WAR', sans-serif;
-    color: white;
-}
-
-#main p::selection{
-    background-color: rgb(255, 0, 0);
-}
-
-#main .wrap{
-    width: 100%;
-    position: relative;
-    z-index: -1;
-}
-
-#main .wrap img{
-    position: absolute;
-    width: 42%;
-    left: 70rem;
-    filter: brightness(1.2);
-    top: -25rem;
+#main .main-text-center{
+    width: 50vw;
+    flex-wrap: wrap;
+    text-align: center;
+    color: #ffffff;
 }
 
 .btn{
-   margin: 1rem 0rem 0rem 20rem;
+   margin-left: 15vw;
 }
 
 .btn button{
     border-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     margin: 1rem 1rem 1rem 0rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     background: transparent;
     cursor: pointer;
     border-radius: 5rem;
@@ -154,14 +134,31 @@ body{
 
 .btn button:hover{
     transform: scale(1.1);
-    border: 2px solid red;
+    border: 1px solid red;
 }
 
-/* ########## ASIDE ########## */
+#main .wrap{
+    position: fixed;
+    z-index: 1;
+    top: 3rem;
+    left: 45rem;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+}
+
+#main .wrap img{
+    background: none;
+    filter: brightness(1.1);
+    width: 50vw;
+}
+
+#main .wrap img:hover{
+    filter: contrast(1.1);
+}
 
 .aside{
     display: flex;
-    /* background-color: red; */
 }
 
 .aside ul{
@@ -170,51 +167,39 @@ body{
     gap: 2rem;
 }
 
-
 .aside ul li a i{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: rgb(255, 255, 255);
     margin-left: 2rem;
 }
 
 .aside ul li a i:hover{
-    animation:slide-right .3s cubic-bezier(.25,.46,.45,.94) both
+    scale: 1.5;
 }
-/* ########## FOOTER ########## */
-
-/* .footer{
-    background-color: rgb(246, 194, 194);
-} */
 
 .cards{
+    margin-top: 1rem;
     display: flex;
-    margin: 2rem 0 0 1rem;
-    /* width: 100%; */
-    gap: 4rem;
+    gap: 1.7rem;
+    padding-left: 2rem;
 }
 
 
-.cards img{
-    width: 16.3vw;
-    border-radius: 20px;
+.cards .card-body img{
+    border-radius: 1rem;
+    border: 1px solid red;
 }
 
-.cards img:hover{
-    border: 2px solid red;
+.cards .card-body img:hover{
+    scale: 1.1;
 }
 
 .footer{
-    display: flex;
-    align-items: center;
     width: 100%;
-    justify-content: center;
-}
-
-.footer p{
-    font-size: 1.4rem;
-    color: rgb(255, 255, 255);
-    font-weight: 800;
-    font-family: 'GOD OF WAR', sans-serif;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 .neve{
