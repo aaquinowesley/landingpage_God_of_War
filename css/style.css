@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
     text-decoration: none;
 }
 
-html{
+html {
     background: url('../assets/scenery.jpg') no-repeat center center;
     -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
@@ -18,12 +18,12 @@ html{
 
 }
 
-:root{
+:root {
     --text-color-: #ffffff;
     --font-family: 'GOD OF WAR', sans-serif;
 }
 
-body{
+body {
     font-family: var(--font-family);
     font-size: 62.5%;
     /* filter: brightness(1.4); */
@@ -37,51 +37,53 @@ body{
         url('../GODOFWAR.TTF') format("truetype-variations");
 }
 
-:mark{
+:mark {
     color: red;
 }
 
-.container{
+.container {
     background-color: black;
     width: 100vw;
     height: 100vh;
     opacity: 0.9;
 }
 
-.header{
+.header {
     display: flex;
 }
 
-.logo img{
+.logo img {
     margin: 0.8rem;
     width: 30%;
 }
 
-.nav{
+.nav {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.nav ul{
+.nav ul {
     display: flex;
     gap: 2rem;
 }
 
-.nav ul li{
+.nav ul li {
     display: block;
 }
 
-.nav ul li a{
+.nav ul li a {
     color: #ffffff;
     font-weight: 200;
     font-size: 0.9rem;
 }
 
-.nav ul li:hover{
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
+.nav ul li:hover {
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -webkit-transform: scale(1.5);
+    /* Safari 3-8 */
     transform: scale(1.5);
     border-bottom: 1px solid red;
 }
@@ -92,7 +94,7 @@ body{
     width: 100%;
 } */
 
-.main-textos{
+.main-textos {
     padding: 1rem;
     flex-direction: column;
     font-size: 1.2rem;
@@ -101,29 +103,31 @@ body{
 ::selection {
     color: rgb(0, 0, 0);
     background-color: red;
-  }
+}
 
-#main .tilte{
+#main .tilte {
     margin-left: 4vw;
     color: #ffffff;
 }
 
-#main .main-text-center{
+#main .main-text-center {
     width: 50vw;
     flex-wrap: wrap;
     text-align: center;
     color: #ffffff;
 }
 
-.btn{
-   margin-left: 15vw;
+.btn {
+    margin-left: 15vw;
 }
 
-.btn button{
+.btn button {
     border-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     margin: 1rem 1rem 1rem 0rem;
     font-size: 0.8rem;
+    -webkit-animation: heartbeat 1.5s ease-in-out 0.5s infinite both;
+    animation: heartbeat 1.5s ease-in-out 0.5s infinite both;
     background: transparent;
     cursor: pointer;
     border-radius: 5rem;
@@ -132,12 +136,12 @@ body{
     padding: 1rem 4rem;
 }
 
-.btn button:hover{
+.btn button:hover {
     transform: scale(1.1);
     border: 1px solid red;
 }
 
-#main .wrap{
+#main .wrap {
     position: fixed;
     z-index: 1;
     top: 3rem;
@@ -145,39 +149,41 @@ body{
     right: 0;
     bottom: 0;
     width: 50%;
+    float: right;
 }
 
-#main .wrap img{
+#main .wrap img {
     background: none;
     filter: brightness(1.1);
     width: 50vw;
 }
 
-#main .wrap img:hover{
+#main .wrap img:hover {
     filter: contrast(1.1);
 }
 
-.aside{
+.aside {
     display: flex;
+    float: left;
 }
 
-.aside ul{
+.aside ul {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.aside ul li a i{
+.aside ul li a i {
     font-size: 1.2rem;
     color: rgb(255, 255, 255);
     margin-left: 2rem;
 }
 
-.aside ul li a i:hover{
+.aside ul li a i:hover {
     scale: 1.5;
 }
 
-.cards{
+.cards {
     margin-top: 1rem;
     display: flex;
     gap: 1.7rem;
@@ -185,24 +191,29 @@ body{
 }
 
 
-.cards .card-body img{
+.cards .card-body img {
     border-radius: 1rem;
     border: 1px solid red;
 }
 
-.cards .card-body img:hover{
+.cards .card-body img:hover {
     scale: 1.1;
 }
 
-.footer{
-    width: 100%;
+.footer {
+    /* width: 100%; */
     color: #ffffff;
-    font-size: 1.1rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
+    float: left;
 }
 
-.neve{
+.footer p {
+    /* background-color: red; */
+}
+
+.neve {
     position: fixed;
     top: -1vh;
     color: rgb(255, 255, 255);
@@ -217,4 +228,90 @@ body{
     }
 }
 
-@keyframes slide-right{0%{transform:translateX(0)}100%{transform:translateX(10px)}}
+@keyframes slide-right {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(10px)
+    }
+}
+
+@-webkit-keyframes heartbeat {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes heartbeat {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
